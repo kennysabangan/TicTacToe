@@ -1,0 +1,27 @@
+.board {
+    display: flex;
+    background-color: white;
+    border: 12px solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-shadow: -6px 10px 0 black;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 7rem;
+    margin: 6px 3px;
+    background-color: #C9F9FC;
+    border: 4px solid black;
+    border-radius: 10px;
+    filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.10));
+    box-shadow: -2px 2px 0 black;
+}
+
+.tile-img {
+    max-height: 100%;
+    padding: 14px;
+}
