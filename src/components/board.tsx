@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import '../assets/styles/board.css';
+import { wait } from '../utils/util';
+import './board.css';
 import title from '../assets/title.png'
 import X_img from '../assets/x.png';
 import O_img from '../assets/o.png';
@@ -39,7 +40,6 @@ const Board = () => {
     const [winner, setWinner] = useState<string | null>(null);
     const [display, setDisplay] = useState("'s Turn");
     const [isGameOver, setIsGameOver] = useState(false);
-    const [playerSymbol, setPlayerSymbol] = useState(X);
     const [isAiThinking, setIsAiThinking] = useState(false);
     const [isAiTurn, setIsAiTurn] = useState(false);
 
@@ -133,10 +133,6 @@ const Board = () => {
             playAfterAIThinks(thinkingTime, aiMove);
     }
 
-    function wait(ms: number) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-      }
-
     async function playAfterAIThinks(thinkTime: number, aiMove: Pair | null) {
         setIsAiThinking(true);
         await wait(thinkTime);
@@ -194,7 +190,7 @@ const Board = () => {
                 { winner === O &&
                     <img src={oImg.src} alt="O" height="50px" className="player-img"/>
                 }
-                <span>{display}</span>
+                <span className="display-text">{display}</span>
             </div>
         }
         { gameOn &&
