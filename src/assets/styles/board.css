@@ -1,7 +1,30 @@
 .title-img {
     position: absolute;
-    transform: scale(0.5);
-    margin-bottom: 65vh;
+}
+
+@media (min-width: 320px) {
+    .title-img {
+        transform: scale(0.4) translateY(-170%);
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .title-img {
+        transform: scale(0.4) translateY(-140%);
+    }
+    .board {
+        margin-top: 10vh;
+    }
+}
+
+@media (min-width: 600px) {
+    .title-img {
+        transform: scale(0.5) translateY(-140%);
+    }
 }
 
 .board {
@@ -11,9 +34,6 @@
     border-radius: 2rem;
     padding: 2rem;
     box-shadow: -6px 10px 0 black;
-    max-width: 90vw;
-    min-width: 25vw;
-    min-height: 25vw;
 }
 
 .select-mode {
@@ -43,7 +63,7 @@
     box-shadow: -2px 2px 0 black;
 
     /* Breakpoints */
-    @media (max-width: 600px) {
+    @media (min-width: 600px) {
         height: 7rem;
         width: 7rem;
     }

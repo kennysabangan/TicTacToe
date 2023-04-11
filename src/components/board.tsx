@@ -99,17 +99,17 @@ const Board = () => {
     function moveAi() {
         let aiMove: Pair | null = actions(board)[0];
             switch (modeSelected) {
-                // EASY: 55% CHANCE OF CHOSING THE MOST OPTIMAL MOVE
+                // EASY: 45% CHANCE OF CHOSING THE MOST OPTIMAL MOVE
                 case EASY:
-                    if (Math.random() < 0.45) {
+                    if (Math.random() < 0.55) {
                         aiMove = actions(board)[Math.floor(Math.random() * actions(board).length)];
                     } else {
                         aiMove = minimax(board);
                     }
                     break;
-                // MEDIUM: 80% CHANCE OF CHOOSING THE MOST OPTIMAL MOVE
+                // MEDIUM: 70% CHANCE OF CHOOSING THE MOST OPTIMAL MOVE
                 case MEDIUM:
-                    if (Math.random() < 0.20) {
+                    if (Math.random() < 0.30) {
                         aiMove = actions(board)[Math.floor(Math.random() * actions(board).length)];
                     } else {
                         aiMove = minimax(board);
