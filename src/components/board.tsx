@@ -190,7 +190,7 @@ const Board = () => {
                 { winner === O &&
                     <img src={oImg.src} alt="O" height="50px" className="player-img"/>
                 }
-                <span className="display-text">{display}</span>
+                <p className="display-text">{display}</p>
             </div>
         }
         { gameOn &&
