@@ -1,10 +1,11 @@
 import { MouseEventHandler } from "react";
-import { X, O, EMPTY } from "../utils/tictactoe";
+import { X, O, EMPTY, Pair } from "../utils/tictactoe";
 import X_img from '../assets/x.png';
 import O_img from '../assets/o.png';
 
 type TileProps = {
     value: string | null;
+    location: Pair;
     onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 

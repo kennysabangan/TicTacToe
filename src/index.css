@@ -8,6 +8,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   background-color: #E5E5E5;
+  user-select: none; /* Standard syntax */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer and Edge */
 }
 
 * {
@@ -19,4 +23,19 @@
 html,
 body {
   height: 100vh;
+  font-family: "Game Display Font", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+button {
+  font-family: "Game Display Font", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+}
+
+@font-face {
+  font-family: "Game Display Font";
+  src: url("./assets/fonts/LuckiestGuy-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }

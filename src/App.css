@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
 }
 
 .wrapper::before {
@@ -17,6 +17,6 @@
     background-image: url("./assets/background.png");
     background-position: center;
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: -1;
 }
