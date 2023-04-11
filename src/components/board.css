@@ -91,17 +91,18 @@ button.tile:hover {
 
 .game-display {
     position: relative;
-    margin-top: -2rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-top: -2rem;
     background-color: #C9F9FC;
     border: 5px solid black;
     border-radius: 10px;
-    padding: 0px 16px;
+    padding: 0px 12px;
     font-size: 20px;
     color: #FBB500;
     min-height: 60px;
-    min-width: 150px;
+    min-width: 180px;
 }
 
 .player-img {
